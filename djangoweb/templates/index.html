@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home page</title>
+</head>
+<style>
+#form{
+  text-align: center;
+  text-size-adjust: 300px;
+}
+</style>
+<body>
+<h1 id="form">Article Zone</h1>
+<br></br>
+
+<a href="{% url 'result' %}">Click here to come to result page</a>
+<br></br>
+
+<form action="{% url 'result' %}">
+  <br></br>
+
+  {% csrf_token %}
+  
+  <textarea cols="60" rows="20" name="article"></textarea>
+  <br></br>
+  <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
